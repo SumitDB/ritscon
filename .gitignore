@@ -1,1 +1,17 @@
 /master/migrations/*
+
+# Ignore .pyc files
+*.pyc
+
+# Ignore virtual environment folders
+venv/
+env/
+
+# Ignore IDE/Editor files
+.idea/
+.vscode/
+*.iml
+
+
+# Ignore SQLite database file
+db.sqlite3
