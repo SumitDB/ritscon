@@ -36,3 +36,19 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+.nav-li-style-1{
+width:6rem;
+text-align: center;
+}
+
+.nav-li-style-2 {
+        width: 6rem; /* Fixed width for large screens */
+    }
+
+    @media (max-width: 767px) {
+        /* Media query for smaller screens (e.g., mobile) */
+        .nav-li-style-2 {
+            width: auto; /* Responsive width for smaller screens */
+        }
+    }
