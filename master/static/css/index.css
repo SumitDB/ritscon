@@ -1,0 +1,38 @@
+.navbar-scroll {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-scroll.scrolled {
+    background-color: rgba(203, 241, 203, 0.8); /* Use rgba to specify transparency (0.8 for 80% opacity) */
+}
+
+.nav-height{
+    height: 5rem;
+}
+.enquiry-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.enquiry-form h5 {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 20px;
+}
+
+.enquiry-form form {
+    margin-top: 20px;
+}
+
+.enquiry-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
