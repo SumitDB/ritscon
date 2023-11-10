@@ -52,3 +52,11 @@ text-align: center;
             width: auto; /* Responsive width for smaller screens */
         }
     }
+
+
+ .carousel-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
