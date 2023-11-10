@@ -10,6 +10,9 @@ venv/
 env/
 
 db.sqlite3
+ritscon/db.sqlite3
+/RITS/ritscon/db.sqlite3
+
 
 # Ignore IDE/Editor files
 .idea/
