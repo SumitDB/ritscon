@@ -1,4 +1,4 @@
-{% load static %}
+<!--{% load static %}-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +17,79 @@
     <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
     <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
     <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-</head>
-<style>
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100&family=Roboto:wght@100&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100&family=Roboto:wght@100;300&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arsenal&family=DM+Sans:opsz,wght@9..40,100&family=Playfair+Display&family=Roboto:wght@100;300&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arsenal&family=DM+Sans:opsz,wght@9..40,100&family=Playfair+Display&family=Raleway:wght@200&family=Roboto:wght@100;300&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arsenal&family=DM+Sans:opsz,wght@9..40,100&family=Playfair+Display&family=Quicksand:wght@300&family=Raleway:wght@200&family=Roboto:wght@100;300&family=Single+Day&display=swap" rel="stylesheet">
+    <style>
+     body {
+<!--font-family: 'Playfair Display', serif;-->
+<!--font-family: 'Raleway', sans-serif;-->
+font-family: 'Quicksand', sans-serif;
+
+letter-spacing: 0.1rem;
+line-height: 1.8rem;
+    }
+
+.headings{
+font-family: 'Raleway', sans-serif;
+font-size: 2.5rem;
+}
+
+
+#navbarsExample03 a {
+      font-family: 'Roboto', sans-serif; /* Apply 'Roboto' to h1 */
+  font-size: 1.1rem;
+    font-weight: bold;
+    color:black;
+      position: relative;
+  text-decoration: none;
+  overflow: hidden;
+    }
+
+
+
+#navbarsExample03 a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Change to your desired underline color */
+  transition: width 0.5s ease; /* Adjust the speed by changing the transition duration */
+}
+
+#navbarsExample03 a:hover:after,
+#navbarsExample03 a:active:after {
+  width: 100%;
+}
+
  .carousel-item {
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
+
+  .footer-padding{
+      padding: 2rem 5rem 2rem 5rem;
+  }
+
+
+  .form-control{
+  border-radius: 0px;
+    border: 3px solid;
+  }
+
+    .about-us-p-bg{
+    background-color:#F2EFEA;
+    }
+
 
   @media (max-width: 768px) {
     .carousel-item {
@@ -40,58 +106,76 @@
     display: block;
     text-indent: -9999px; /* Hide text content */
   }
+
+  .nav-bg-blur{
+  background: linear-gradient(rgb(155 155 155 / 16%), rgb(149 149 149 / 15%)), url('your-image-url.jpg');
+  backdrop-filter: blur(7px);
+    }
+
+    .about-us-div{
+    min-height: 600px;
+    background-color:#F2EFEA;
+    }
+    .solution-div{
+    min-height: 600px;
+    background-color:#cba06fcc;
+    }
+
+    .activities-div{
+    min-height: 600px;
+    }
+
+    .activities-img{
+    background-size: cover;
+    background-position: center;
+    }
+
+    .btn{
+    border-radius: 0px;
+    padding: 0.3rem 2.5rem 0.3rem 2.5rem;
+    background-color: black;
+    color: white; /* Set text color to white */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    }
+
+.btn:hover {
+  background-color: #000000ba; /* Change the background color on hover */
+  color:white;
+}
+    @media (min-width: 768px) and (max-width: 992px) {
+    #navbarsExample03 a {
+      font-size: 0.9rem;
+      padding: 0.3rem;
+    }
+
+#navbarsExample03 .navbar-nav .nav-item .nav-link i fa-xl{
+      font-size: 0.3rem; /* Adjust the icon size as needed */
+    }
+
+    .navbar-brand{
+    margin-right:0.3rem;
+    }
+  }
+
+<!--.our-work-bg{-->
+<!--background-color:#fffcf8;-->
+<!--}-->
+
+<!--.solutions-bg{-->
+<!--background-color:#CBA06F;-->
+<!--}-->
+
+<!--.footer-bg{-->
+<!--    background-color:#F1E6D6;-->
+<!--}-->
+
+
 </style>
 <body>
-<!--    <nav class="navbar navbar-expand-lg navbar-dark bg-faded fixed-top navbar-scroll nav-height py-5">-->
-<!--        <div class="container-fluid">-->
-<!--                <div class="d-flex justify-content-start col-md-4">-->
-<!--                    <img src="{% static 'images/Screenshot from 2023-11-05 12-19-25.png' %}" alt="" class="img-fluid w-50 w-sm-75 w-md-100">-->
-<!--                </div>-->
-<!--                <div class="d-flex justify-content-center col-md-4">-->
-<!--                <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-md-evenly">-->
-<!--                        <li class="nav-item nav-li-style-2">-->
-<!--                            <a class="nav-link active" aria-current="page" href="#" style="color: black;" >Home</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item nav-li-style-2">-->
-<!--                            <a class="nav-link" href="#" style="color: black;">About us</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item nav-li-style-2">-->
-<!--                            <a class="nav-link" href="#" style="color: black;">Solution</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item nav-li-style-2">-->
-<!--                            <a class="nav-link" href="#" style="color: black;">Activities</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item nav-li-style-2">-->
-<!--                            <a class="nav-link" href="#" style="color: black;">Career</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item nav-li-style-2">-->
-<!--                            <a class="nav-link" href="#" style="color: black;">Contact us</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                </div>-->
-
-<!--                <div class="d-flex justify-content-end col-md-4">-->
-<!--                    <div class="d-flex justify-content-center col-md-4">-->
-<!--                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
-<!--                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"-->
-<!--                        aria-label="Toggle navigation">-->
-<!--                        <span class="navbar-toggler-icon"></span>-->
-<!--                    </button>-->
-<!--                        <ul class="nav flex-row d-flex justify-content-sm-evenly gap-3" style="width: 10rem;">-->
-<!--                        <li><i class="fa-brands fa-instagram fa-beat-fade fa-xl" style="color: #feda75;"></i></li>-->
-<!--                        <li><i class="fa-brands fa-facebook fa-beat-fade fa-xl" style="color: #3b5998;"></i></li>-->
-<!--                        <li><i class="fa-brands fa-twitter fa-beat-fade fa-xl" style="color: #1DA1F2;"></i></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--        </div>-->
-<!--    </nav>-->
-    <!-- Navbar-COPY-End -->
 
 <!-- NAVBAR-NEW-START-->
     <nav
-      class="navbar navbar-expand-md navbar-dark bg-faded bg-faded fixed-top navbar-scroll nav-height"
+      class="navbar navbar-expand-md navbar-dark bg-faded bg-faded fixed-top navbar-scroll nav-height nav-bg-blur"
       aria-label="Third navbar example"
     >
       <div class="container-fluid">
@@ -144,7 +228,7 @@
 
 <!-- NAVBAR-NEW-END-->
 
-<!-- -->
+<!--Carousel-Slide-Start -->
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -206,15 +290,81 @@
 </div>
 
 
-
     <!-- Carousel-Slide-End -->
+
     <!-- About-Us-Start -->
-    <div class="container-fluid " >
-        <div class="row" id="scrollspyAboutUs">
-            <div class="col-md-4 p-md-5 p-sm-10 col-sm-12 "  >
-                <b> About us </b>
+    <div class="container-fluid about-us-div">
+        <div class="row align-items-center "  id="scrollspyAboutUs">
+            <div class="col-md-4 p-md-5  col-sm-12 text-center p-5">
+                <p class="headings"> About us </p>
             </div>
-            <div class="col-md-8 p-md-5 p-sm-10 col-sm-12 hello">
+            <div class="col-md-8 p-md-5 p-sm-10 col-sm-12 text-center">
+                <p>
+                Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
+                nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
+                rerum molestiae vero.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum
+                amet unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam
+                praesentium id.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
+                incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui,
+                praesentium non saepe!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor!
+                Inventore blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus
+                officiis?
+                Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
+                nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
+                rerum molestiae vero.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum
+                amet unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam
+                praesentium id.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
+                incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui,
+                praesentium non saepe!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor!
+                Inventore blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus
+                officiis
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About-Us-End -->
+
+
+<!--Our Work Start-->
+<div class="container-fluid our-work-bg">
+    <p class="text-center headings py-5">Our Work</p>
+<div class="container">
+      <div class="row">
+          <!-- First Row -->
+          <div class="col-md-6 col-12 p-3 p-md-5">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 1">
+          </div>
+          <div class="col-md-6 col-12 p-3 p-md-5">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 2">
+          </div>
+
+          <!-- Second Row -->
+          <div class="col-md-6 col-12 p-3 p-md-5">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 3">
+          </div>
+          <div class="col-md-6 col-12 p-3 p-md-5">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 4">
+          </div>
+      </div>
+  </div>
+</div>
+<!--Our Work End-->
+
+    <!-- Solution-Start -->
+
+    <div class="container-fluid my-3 solution-div">
+        <div class="row align-items-center " id="scrollspySolution">
+            <div class="col-md-4 p-md-5 p-sm-10 col-sm-12 text-center">
+                <p class="headings my-5"> Solution </p>
+            </div>
+            <div class="col-md-8 p-md-5 p-sm-10 col-sm-12 text-center">
                 Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
                 nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
                 rerum molestiae vero.
@@ -244,110 +394,37 @@
         </div>
     </div>
 
-    <!-- About-Us-End -->
-
-    <!-- Solution-Start -->
-
-    <div class="container-fluid p-sm-5">
-        <h2 id="scrollspySolution">Solution</h2>
-        <p>
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-
-        </p>
-    </div>
 
     <!-- Solution-End -->
 
     <!-- Activites-Start -->
 
-    <div class="container-fluid p-sm-5" id="scrollspyActivities">
-        <h2>Activites</h2>
-        <p>
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
-            incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
-            non saepe!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
-            blanditiis fugiat reprehenderit, ullam id dicta sint illum dolore quas, quia aliquid eum minus officiis?
-            Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
-            nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
-            rerum molestiae vero.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
-            unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
-            id.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
+    <div class="container-fluid activities-div my-3" id="scrollspyActivities">
+      <div class="row">
+        <div class="col-12 col-md-6 p-md-5 p-sm-10">
+            <div class="container my-5">
+      <div class="row align-items-center justify-content-center">
+          <!-- First Row -->
+          <div class="col-12 col-md-6 mb-3 ">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 1">
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 2">
+          </div>
+
+          <!-- Second Row -->
+          <div class="col-12 col-md-6 mb-3">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 3">
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+              <img src="{% static 'images/DSCN8333.JPG' %}" class="img-fluid rounded" alt="Image 4">
+          </div>
+      </div>
+  </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="headings text-center my-5">Activities</p>
+          <p class="text-center p-md-5 p-sm-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sint possimus sequi eum culpa eius,
             incidunt magnam, atque blanditiis minus unde cupiditate nostrum. Iusto repellendus officia qui, praesentium
             non saepe!
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nulla hic a adipisci dolor! Inventore
@@ -359,17 +436,19 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, aut commodi impedit cupiditate cum amet
             unde fugit mollitia velit enim repudiandae assumenda, sit voluptatem, similique ad rerum quam praesentium
             id.
-
-        </p>
+          </p>
+        </div>
+      </div>
     </div>
+
 
     <!-- Activites-End -->
 
     <!-- Careers-Start -->
 
-    <div class="container-fluid p-sm-5" id="scrollspyCareer">
-        <h2>Careers</h2>
-        <p>
+    <div class="container-fluid p-sm-3 careers-div my-3" id="scrollspyCareer">
+        <p class="headings text-center my-5">Careers</p>
+        <p class="text-center p-md-5 p-sm-10">
             Column Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique quibusdam quis deleniti,
             nostrum id praesentium dolores, eum sapiente qui, ipsum perferendis cum voluptatibus maiores eius magni
             rerum molestiae vero.
@@ -404,74 +483,146 @@
     </div>
 
     <!-- Careers-End -->
-<div class="container" id="scrollspyContactUs">
-    <footer class="py-5">
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6 offset-lg-1">
-                <div class="contact-info">
-                    <h5>Contact us</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <i class="fas fa-envelope text-primary"></i>
-                            <a href="#" class="nav-link p-0 text-muted">ritsconsultancy10@gmail.com</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <i class="fas fa-phone-alt text-primary"></i>
-                            <a href="#" class="nav-link p-0 text-muted">+91 8975173109</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <i class="fas fa-map-marker-alt text-primary"></i>
-                            <a href="#" class="nav-link p-0 text-muted">
-                                Flat No. A-506 Dynamic Oasis, A&B – Co-operative Housing Society, Undri, Pune, India, Pin-411060
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-8 col-sm-6 offset-lg-3">
-                <div class="enquiry-form">
-                    <h5>Get in touch</h5>
-                    <form id="enquiry-form" class="contact1-form validate-form" method="post">
-                        {% csrf_token %}
-                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Name is required">
-                            {{ form.name.errors }}
-                            {{ form.name }}
-                            <span class="shadow-input1"></span>
-                        </div>
+    <!-- Footer-1-Start  -->
 
-                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Valid email is required: ex@abc.xyz">
-                            {{ form.email.errors }}
-                            {{ form.email }}
-                            <span class="shadow-input1"></span>
-                        </div>
+  <div class="container-fluid footer-bg" id="scrollspyContactUs">
+      <div class="row">
+        <div class="col-12 col-md-6 align-items-center">
+          <div class="footer-padding">
+            <h2 class="mt-3 mb-5" style="color:#1B4F44">Contact us</h2>
 
-                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Mobile Number is required">
-                            {{ form.mobile_number.errors }}
-                            {{ form.mobile_number }}
-                            <span class="shadow-input1"></span>
-                        </div>
-
-                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Message is required">
-                            {{ form.message.errors }}
-                            {{ form.message }}
-                            <span class="shadow-input1"></span>
-                        </div>
-
-                        <div class="container-contact1-form-btn">
-                            <button class="btn btn-primary contact1-form-btn" style="background-color: #3498db; border-color: #3498db;">
-                                <span>
-                                    Submit
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <p class="my-5"><i class="fas fa-envelope mr-4"></i>ritsconsultancy10@gmail.com</p>
+            <p class="my-5"><i class="fas fa-phone-alt mr-4"></i> +91 8975173109</p>
+            <p class="my-5">
+                <i class="fas fa-map-marker-alt mr-4"></i>
+              Flat No. A-506 Dynamic Oasis, A&B – Co-operative Housing Society,
+              Undri, Pune, India, Pin-411060
+            </p>
+                <div class="d-flex justify-content-start">
+      <div class="mx-3"><a><i class="fab fa-facebook-f fa-lg" style="color: #000000;"></i></a></div>
+      <div class="mx-3"><a><i class="fab fa-instagram fa-lg" style="color: #000000;"></i></a></div>
+      <div class="mx-3"><a><i class="fab fa-twitter fa-lg" style="color: #000000;"></i></a></div>
+    </div>
+          </div>
         </div>
-    </footer>
-</div>
+        <div class="col-12 col-md-6 align-items-center">
+          <form class="footer-padding">
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label"
+                >Enter Your Name</label
+              >
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="exampleInputtext1"
+                aria-describedby="textHelp"
+              />
+              <label for="exampleInputEmail1" class="form-label"
+                >Enter Your Email</label
+              >
+              <input
+                type="email"
+                class="form-control mb-3"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <label for="exampleInputNumber1" class="form-label"
+                >Enter Your Phone Number</label
+              >
+              <input
+                type="number"
+                class="form-control mb-3"
+                id="exampleInputNumber1"
+              />
+              <label for="exampleInputMessage1" class="form-label"
+                >Enter Your Message</label
+              >
+                <textarea class="form-control" placeholder="Leave a your message here" id="exampleInputMessage1" style="min-height: 200px"></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn ">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer-1-End  -->
+
+
+
+<!--<div class="container" id="scrollspyContactUs">-->
+<!--    <footer class="py-5">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-2 col-md-4 col-sm-6 offset-lg-1">-->
+<!--                <div class="contact-info">-->
+<!--                    <h5>Contact us</h5>-->
+<!--                    <ul class="nav flex-column">-->
+<!--                        <li class="nav-item mb-2">-->
+<!--                            <i class="fas fa-envelope text-primary"></i>-->
+<!--                            <a href="#" class="nav-link p-0 text-muted">ritsconsultancy10@gmail.com</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item mb-2">-->
+<!--                            <i class="fas fa-phone-alt text-primary"></i>-->
+<!--                            <a href="#" class="nav-link p-0 text-muted">+91 8975173109</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item mb-2">-->
+<!--                            <i class="fas fa-map-marker-alt text-primary"></i>-->
+<!--                            <a href="#" class="nav-link p-0 text-muted">-->
+<!--                                Flat No. A-506 Dynamic Oasis, A&B – Co-operative Housing Society, Undri, Pune, India, Pin-411060-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-lg-4 col-md-8 col-sm-6 offset-lg-3">-->
+<!--                <div class="enquiry-form">-->
+<!--                    <h5>Get in touch</h5>-->
+<!--                    <form id="enquiry-form" class="contact1-form validate-form" method="post">-->
+<!--                        {% csrf_token %}-->
+<!--                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Name is required">-->
+<!--                            {{ form.name.errors }}-->
+<!--                            {{ form.name }}-->
+<!--                            <span class="shadow-input1"></span>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Valid email is required: ex@abc.xyz">-->
+<!--                            {{ form.email.errors }}-->
+<!--                            {{ form.email }}-->
+<!--                            <span class="shadow-input1"></span>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Mobile Number is required">-->
+<!--                            {{ form.mobile_number.errors }}-->
+<!--                            {{ form.mobile_number }}-->
+<!--                            <span class="shadow-input1"></span>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group wrap-input1 validate-input rounded " data-validate="Message is required">-->
+<!--                            {{ form.message.errors }}-->
+<!--                            {{ form.message }}-->
+<!--                            <span class="shadow-input1"></span>-->
+<!--                        </div>-->
+
+<!--                        <div class="container-contact1-form-btn">-->
+<!--                            <button class="btn btn-primary contact1-form-btn" style="background-color: #3498db; border-color: #3498db;">-->
+<!--                                <span>-->
+<!--                                    Submit-->
+<!--                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>-->
+<!--                                </span>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--</div>-->
+
+
+
             <div class="container-fluid">
                 <div class="d-flex flex-wrap justify-content-evenly align-items-center py-3 my-4 border-top">
                     <ul class="nav col-md-4 justify-content-start">
